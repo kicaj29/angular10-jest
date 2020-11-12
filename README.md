@@ -63,5 +63,29 @@ npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma
 
 Rename this file because we will not be using karma any more. We keep this file only to be able review its configuration in the future.
 
+## 9 remove the test target inside the angular.json file
+
+Because script ```test``` will run command ```jest``` we do not need the following target in ```angular.json```.
+
+```json
+"test": {
+  "builder": "@angular-devkit/build-angular:karma",
+  "options": {
+    "main": "src/test.ts",
+    "polyfills": "src/polyfills.ts",
+    "tsConfig": "tsconfig.spec.json",
+    "karmaConfig": "karma.conf.js",
+    "assets": [
+      "src/favicon.ico",
+      "src/assets"
+    ],
+    "styles": [
+      "src/styles.scss"
+    ],
+    "scripts": []
+  }
+},
+```
+
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
