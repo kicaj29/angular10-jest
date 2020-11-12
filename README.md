@@ -87,5 +87,23 @@ Because script ```test``` will run command ```jest``` we do not need the followi
 },
 ```
 
+# important parameters
+
+* --runInBand
+  Use it to avoid parallelization - makes sense for example when build server has limited CPU resources (for example only one core)
+  https://stackoverflow.com/questions/43864793/why-does-jest-runinband-speed-up-tests   
+  https://jestjs.io/docs/en/23.x/cli#--runinband   
+  https://github.com/facebook/jest/issues/1524#issuecomment-262366820
+* --silent=true   
+  https://jestjs.io/docs/en/23.x/cli#--silent
+
+# schematics
+
+jest can be also added automatically using schematics for example: https://github.com/briebug/jest-schematic
+
+```
+ng add @briebug/jest-schematic
+```
+
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
