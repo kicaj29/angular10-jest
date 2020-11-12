@@ -59,6 +59,9 @@ SyntaxError: D:\GitHub\kicaj29\angular10-jest\tsconfig.json: Unexpected token / 
 npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
 ```
 
+## 8 rename karma.conf.js
+
+Rename this file because we will not be using karma any more. We keep this file only to be able review its configuration in the future.
 
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
