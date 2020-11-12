@@ -51,6 +51,8 @@ SyntaxError: D:\GitHub\kicaj29\angular10-jest\tsconfig.json: Unexpected token / 
     at Object.Module._extensions..js (internal/modules/cjs/loader.js:1221:10)
     at Module.load (internal/modules/cjs/loader.js:1050:32)
 ```
+## 6 add reporter jest-junit
+
 
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
