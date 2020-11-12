@@ -53,6 +53,12 @@ SyntaxError: D:\GitHub\kicaj29\angular10-jest\tsconfig.json: Unexpected token / 
 ```
 ## 6 add reporter jest-junit
 
+## 7 uninstall karma dependencies
+
+```
+npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
+```
+
 
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
