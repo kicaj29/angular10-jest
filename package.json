@@ -5,11 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test --coverage",
+    "test": "ng test",
+    "test:coverage": "ng test --coverage",
     "test:watch": "ng test --watch",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test:debug:watch": "node --inspect-brk --inspect ./node_modules/jest/bin/jest -i --watch"
+    "test-chrome:debug:watch": "node --inspect-brk --inspect ./node_modules/jest/bin/jest -i --watch"
   },
   "private": true,
   "dependencies": {
