@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="2" errors="0" time="16.977">
+  <testsuite name="AppComponent" errors="0" failures="2" skipped="0" timestamp="2020-11-13T08:18:07" time="15.723" tests="4">
+    <testcase classname="AppComponent" name="should create the app" time="0.077">
+    </testcase>
+    <testcase classname="AppComponent" name="should have as title &apos;angular10-jest&apos;" time="0.028">
+    </testcase>
+    <testcase classname="AppComponent" name="should render title" time="0.024">
+      <failure>TypeError: Cannot read property &apos;textContent&apos; of null
+    at D:\GitHub\kicaj29\angular10-jest\src\app\app.component.spec.ts:34:51
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:386:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\proxy.js:117:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:385:36)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:143:47)
+    at Object.wrappedFunc (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-preset-angular\build\zone-patch\index.js:40:30)
+    at Object.asyncJestTest (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:75:41</failure>
+    </testcase>
+    <testcase classname="AppComponent" name="should have correct background color" time="13.247">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;#1976d2&quot;
+Received: &quot;&quot;
+    at D:\GitHub\kicaj29\angular10-jest\src\app\app.component.spec.ts:41:43
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:386:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\proxy.js:117:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:385:36)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:143:47)
+    at Object.wrappedFunc (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-preset-angular\build\zone-patch\index.js:40:30)
+    at Object.asyncJestTest (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:75:41</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -105,5 +105,32 @@ jest can be also added automatically using schematics for example: https://githu
 ng add @briebug/jest-schematic
 ```
 
+# debugging jest
+
+## option 1
+
+Add to ```package.json``` script ```"test:debug:watch": "node --inspect-brk --inspect ./node_modules/jest/bin/jest -i --watch"```.
+
+Run script ```npm run test:debug:watch```:
+
+```
+PS D:\GitHub\kicaj29\angular10-jest> npm run test:debug:watch
+
+> angular10-jest@0.0.0 test:debug:watch D:\GitHub\kicaj29\angular10-jest
+> node --inspect-brk --inspect ./node_modules/jest/bin/jest -i --watch
+
+Debugger listening on ws://127.0.0.1:9229/1c47fdba-e5aa-4439-8e11-d4ae243c3265
+For help, see: https://nodejs.org/en/docs/inspector
+```
+
+Next run Chrome with url: ```chrome://inspect``` and go to devices section.
+Wait few seconds and in remote target section will appear jest URL:
+
+![01-jest-debugging.png](images/01-jest-debugging.png)
+
+Click ```inspect``` link. New tab will be opened were you will be able debug unit tests.
+
+![02-jest-debugging.png](images/02-jest-debugging.png)
+
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   

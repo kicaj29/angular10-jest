@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="1" errors="0" time="4.243">
+  <testsuite name="AppComponent" errors="0" failures="1" skipped="0" timestamp="2020-11-13T08:00:13" time="3.202" tests="4">
+    <testcase classname="AppComponent" name="should create the app" time="0.196">
+    </testcase>
+    <testcase classname="AppComponent" name="should have as title &apos;angular10-jest&apos;" time="0.128">
+    </testcase>
+    <testcase classname="AppComponent" name="should render title" time="0.097">
+    </testcase>
+    <testcase classname="AppComponent" name="should have correct background color" time="0.091">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: &quot;#1976d2&quot;
+Received: &quot;&quot;
+    at D:\GitHub\kicaj29\angular10-jest\src\app\app.component.spec.ts:41:43
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:386:30)
+    at ProxyZoneSpec.Object.&lt;anonymous&gt;.ProxyZoneSpec.onInvoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\proxy.js:117:43)
+    at ZoneDelegate.Object.&lt;anonymous&gt;.ZoneDelegate.invoke (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:385:36)
+    at Zone.Object.&lt;anonymous&gt;.Zone.run (D:\GitHub\kicaj29\angular10-jest\node_modules\zone.js\dist\zone.js:143:47)
+    at Object.wrappedFunc (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-preset-angular\build\zone-patch\index.js:40:30)
+    at Object.asyncJestTest (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:106:37)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:45:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:28:19)
+    at D:\GitHub\kicaj29\angular10-jest\node_modules\jest-jasmine2\build\queueRunner.js:75:41
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

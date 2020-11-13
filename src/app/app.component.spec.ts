@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
@@ -30,6 +31,14 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
+    debugger;
     expect(compiled.querySelector('.content span').textContent).toContain('angular10-jest app is running!');
   });
+
+  /*it('should have correct background color', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const colorEl: HTMLElement = fixture.debugElement.query(By.css('.toolbar')).nativeElement;
+    expect(colorEl.style.backgroundColor).toBe('');
+  });*/
 });
