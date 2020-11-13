@@ -104,6 +104,16 @@
               "devServerTarget": "angular10-jest:serve:production"
             }
           }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            // The options and everything in here can be removed.
+            "jestConfig": "./jest.config.js",
+            "tsConfig": "./tsconfig.spec.json",
+            "passWithNoTests": false,
+            "setupFile": "./src/test.ts"
+          }
         }
       }
     }},

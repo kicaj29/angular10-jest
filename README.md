@@ -107,7 +107,7 @@ ng add @briebug/jest-schematic
 
 # debugging jest
 
-## option 1
+## option 1 - debugging in default browser
 
 Add to ```package.json``` script ```"test:debug:watch": "node --inspect-brk --inspect ./node_modules/jest/bin/jest -i --watch"```.
 
@@ -132,5 +132,96 @@ Click ```inspect``` link. New tab will be opened were you will be able debug uni
 
 ![02-jest-debugging.png](images/02-jest-debugging.png)
 
+## option 2 - debugging in VSC
+
+### launch.json
+Create a launch.json file:
+![03-create-launchjson.png](images/03-create-launchjson.png)
+
+Select node environment:
+![04-node-env.png](images/04-node-env.png)
+
+It will create file ```launch.json``` in ```.vscode``` folder.
+
+Next update this file with the following content:
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Jest All",
+        "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+        "cwd": "${workspaceFolder}",
+        "args": [
+          "test",
+          "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+          "--runInBand"
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "disableOptimisticBPs": true,
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Jest Current File",
+        "program": "${workspaceFolder}/node_modules/@angular/cli/bin/ng",
+        "cwd": "${workspaceFolder}",
+        "args": [
+          "test",
+          "--testMatch=\"**/+(*.)+(spec|test).+(ts|js)?(x)\"",
+          "--testPathPattern=${fileBasenameNoExtension}",
+          "--runInBand",
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "disableOptimisticBPs": true,
+      }
+    ]
+}
+```
+
+### @angular-builders/jest
+Install:
+
+```
+npm install --save-dev @angular-builders/jest
+```
+
+### update angular.json
+
+```json
+"test": {
+  "builder": "@angular-builders/jest:run",
+  "options": {
+    // jestConfig, tsConfig, setupFile could be removed because anyway these are their default values!
+    "jestConfig": "./jest.config.js",
+    "tsConfig": "./tsconfig.spec.json",
+    "passWithNoTests": false,
+    "setupFile": "./src/test.ts"
+  }
+}
+```
+
+### add new scripts to package.json
+
+```json
+"test": "ng test --coverage",
+"test:watch": "ng test --watch",
+```
+
+Press F5 to start debugging in VS Code
+
+
 # resources
 https://www.amadousall.com/how-to-set-up-angular-unit-testing-with-jest/   
+https://mattmazzola.medium.com/how-to-debug-jest-tests-with-vscode-48f003c7cb41   
+https://artsy.github.io/blog/2018/08/24/How-to-debug-jest-tests/   
+https://code.visualstudio.com/docs/editor/debugging   
+https://dev.to/angular/setup-jest-for-angular-with-debugging-in-visual-studio-code-2d96   

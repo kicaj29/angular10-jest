@@ -4,7 +4,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
     "types": [
-      "jest"                      // 1
+      "jest"                     // 1
     ],
     "esModuleInterop": true,      // 2 - Enable the esModuleInterop option of the TypeScript compiler otherwise Jest will output a lot of warnings in the console.
     "emitDecoratorMetadata": true // 3 - Enable the emitDecoratorMetadata option of the TypeScript compiler otherwise Angular's Dependency Injection won't work with Jest.

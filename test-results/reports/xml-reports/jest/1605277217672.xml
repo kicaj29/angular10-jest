@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="7.126">
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2020-11-13T14:20:19" time="6.058" tests="4">
+    <testcase classname="AppComponent" name="should create the app" time="0.187">
+    </testcase>
+    <testcase classname="AppComponent" name="should have as title &apos;angular10-jest&apos;" time="0.099">
+    </testcase>
+    <testcase classname="AppComponent" name="should render title" time="1.986">
+    </testcase>
+    <testcase classname="AppComponent" name="should have correct background color" time="0.073">
+    </testcase>
+  </testsuite>
+</testsuites>
